@@ -138,6 +138,21 @@ entrega = st.date_input("Fecha de entrega", value=None, key= "entr")
 se crea una variable llamada entrega en donde se guarda  la fecha de entrega de la tarea
 
 y por ultimo se crea un boton que envia la actividad.
+
+
+se implementa un condicional en el cual si se cumple que:
+- Se escoge asignatura en el selectbox
+- Se escribe descripcion
+- Se asigna fecha de entrega 
+- Se pulsa en enviar 
+
+
+```python
+fecha = entrega.strftime("%d/%m/%Y")
+```
+se pasa el formato de date a str, para poder imprimirlo.
+
+
 ## Proyecto
 
 Posteriormente cuando se cumple el session state en el inicio de sesion del usuario se abre la funcion proyecto
