@@ -97,14 +97,82 @@ def iniciar_estudiante():
     else:
         proyecto()
 ```
-En esta se revisa si se 
+En esta se revisa si se cumple a cabalidad lo mencionado en el estado de sesion, si es asi se abre directamente la funcion proyecto y si no, entonces vuelve a aparecer login_page_usuario hasta que se cumpla lo del Session State.
+
+#### La otra para el inicio de sesion del monitor:
 
 
 
+```python
+def iniciar_monitor():
+    if "logged_in_monitor" not in st.session_state:
+        st.session_state["logged_in_monitor"] = False
+
+    if not st.session_state["logged_in_monitor"]:
+        login_page_monitor()
+    
+    else:
+        definir_tarea()
+```
+en este al igual que en el inicio de sesion del usuario se verifica si se cumple el session state, si es asi se abre la funcion definir_tarea y sino se abre login_page_monitor hasta que se cumpla lo del sesion state.
+
+
+## Definir tarea
+
+```python
+def definir_tarea():
+```
+En primera instancia se imprime el titulo con un markdown y se muestra en texto una breve explicacion de como asignar una tarea.
+```python
+tarea = pd.DataFrame
+```
+se crea una lista con todas las asignaturas la cual se guarda en la variable tarea; y se crea un selectbox en el cual el usuario puede escoger un elemento de la lista.
+```python
+descripcion = st.text_input("Describe la actividad:", key="descrip")
+```
+se crea una variable descripcion en la cual se guarda la descripcion que da el monitor sobre la tarea.
+
+```python
+entrega = st.date_input("Fecha de entrega", value=None, key= "entr")
+```
+se crea una variable llamada entrega en donde se guarda  la fecha de entrega de la tarea
+
+y por ultimo se crea un boton que envia la actividad.
 ## Proyecto
+
+Posteriormente cuando se cumple el session state en el inicio de sesion del usuario se abre la funcion proyecto
+
+```python
+def proyecto():
+```
+
+Alli comienza por mostrarse el titulo a traves del mismo markdown usado en el titulo de la pagina; ademas se muestra una breve explicacion de como funciona el organizador de tareas.
+
+```python
+st1,st2,st3 = st.columns(3)
+```
+Ademas se crean tres columnas las cuales van a separar las tareas segun su prioridad la primera es prioridad alta, la segunda media y la tercera baja.
+
+
+#### La otra funcion es para el monitor:
+
 
 
 ### Inicio sesion usuario
+
+```python
+def my_function():
+```
+
+-
+-
+-
+-
+
+## Subtitulo
+_te las escribe en cursiva_
+**RESALTADAS**
+~~DF~~
 
 ```python
 def my_function():
