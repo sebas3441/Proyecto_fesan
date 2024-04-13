@@ -168,6 +168,11 @@ st1,st2,st3 = st.columns(3)
 ```
 Ademas se crean tres columnas las cuales van a separar las tareas segun su prioridad la primera es prioridad alta, la segunda media y la tercera baja.
 
+se crea una variable en la cual se almacena el estado de sesion del usuario si es True entonces significa que la tarea aun sigue activa y si es False, entonces la tarea ya no esta activa.
+
+Posteriormente se carga en esta funcion la base de datos igual que en la funcion de definir_tarea.
+
+
 
 #### La otra funcion es para el monitor:
 
